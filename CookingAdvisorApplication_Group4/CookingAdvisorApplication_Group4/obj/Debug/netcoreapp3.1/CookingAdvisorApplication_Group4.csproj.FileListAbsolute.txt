@@ -1,0 +1,13 @@
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\bin\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.exe
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\bin\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.deps.json
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\bin\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.runtimeconfig.json
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\bin\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.runtimeconfig.dev.json
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\bin\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.dll
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\bin\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.pdb
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\obj\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.csproj.AssemblyReference.cache
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\obj\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.AssemblyInfoInputs.cache
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\obj\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.AssemblyInfo.cs
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\obj\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.csproj.CoreCompileInputs.cache
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\obj\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.dll
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\obj\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.pdb
+C:\MericLomlu\Okul\Ders\SE 307\Project\CookingAdvisorApplication_Group4\CookingAdvisorApplication_Group4\obj\Debug\netcoreapp3.1\CookingAdvisorApplication_Group4.genruntimeconfig.cache
