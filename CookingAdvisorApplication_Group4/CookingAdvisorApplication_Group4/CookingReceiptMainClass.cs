@@ -12,6 +12,11 @@ namespace CookingAdvisorApplication_Group4
         private string projectDirectory;
         private string receiptFolderName;
         private string receiptFolderPath;
+        private DirectoryInfo[] categoryNames;
+        private DirectoryInfo[] subCategoryNames; //maybe it should in inherited classes
+        private DirectoryInfo receiptDirectoryInfo;
+        private DirectoryInfo subCategoryDirectoryInfo; //needs set and get
+        private string subCategoryPaths; // needs set and get
 
         private int receiptID;
         private string receiptName;
@@ -19,6 +24,7 @@ namespace CookingAdvisorApplication_Group4
         private string receiptSubCategory;
         private int numberOfCalories;
         private double neededTime;
+        private int numberOfIngredients;
         private string[] ingredients;
         private string[] cookingDirections;
 
@@ -27,6 +33,14 @@ namespace CookingAdvisorApplication_Group4
             projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory)).FullName).FullName).FullName;
             receiptFolderName = @"\Receipts";
             receiptFolderPath = projectDirectory + receiptFolderName;
+            receiptDirectoryInfo = new DirectoryInfo(receiptFolderPath);
+            categoryNames = receiptDirectoryInfo.GetDirectories();
+            foreach(DirectoryInfo dirInfo in categoryNames) //This part maybe must be a part of inherited classes 
+            {
+                subCategoryPaths = receiptFolderPath + @"\" + dirInfo.Name;
+                subCategoryDirectoryInfo = new DirectoryInfo(subCategoryPaths);
+                subCategoryNames = subCategoryDirectoryInfo.GetDirectories();
+            }
         }
 
         //set and get methods for the attributes
@@ -58,6 +72,36 @@ namespace CookingAdvisorApplication_Group4
         public string getReceiptFolderPath()
         {
             return receiptFolderPath;
+        }
+
+        public void setCategoryNames(DirectoryInfo[] catNames)
+        {
+            categoryNames = catNames;
+        }
+
+        public DirectoryInfo[] getCategoryNames()
+        {
+            return categoryNames;
+        }
+
+        public void setSubCategoryNames(DirectoryInfo[] subCatNames)
+        {
+            subCategoryNames = subCatNames;
+        }
+
+        public DirectoryInfo[] getSubCategoryNames()
+        {
+            return subCategoryNames;
+        }
+
+        public void setReceiptDirectoryInfo(DirectoryInfo recDirInfo)
+        {
+            receiptDirectoryInfo = recDirInfo;
+        }
+
+        public DirectoryInfo getReceiptDirectoryInfo()
+        {
+            return receiptDirectoryInfo;
         }
 
         public void setReceiptID(int rID)
@@ -120,6 +164,16 @@ namespace CookingAdvisorApplication_Group4
            return neededTime;
         }
 
+        public void setNumberOfIngredients(int numIng)
+        {
+            numberOfIngredients = numIng;
+        }
+
+        public int getNumberOfIngredients()
+        {
+            return numberOfIngredients;
+        }
+
         public void setIngrediants(string[] ingrdnts)
         {
             ingredients = ingrdnts;
@@ -160,21 +214,16 @@ namespace CookingAdvisorApplication_Group4
             Console.WriteLine("Please enter Number of Calories: ");
             this.setNumberOfCalories(Convert.ToInt32(Console.ReadLine()));
             Console.WriteLine();
-            Console.WriteLine("Please enter Time for being Prepared: ");
+            Console.WriteLine("Please enter Time for being Prepared in Minutes: ");
             this.setNeededTime(Convert.ToDouble(Console.ReadLine()));
             Console.WriteLine();
+            Console.WriteLine("Please enter Number of ingredients: ");
+            this.setNumberOfIngredients(Convert.ToInt32(Console.ReadLine()));
             Console.WriteLine("Please enter Ingredients: (enter -1 to stop entering ingredients...)");
             string[] innerIngredientsArray = new string[30];
-            for(int i = 0; ; i++)
+            for(int i = 0; i < getNumberOfIngredients(); i++)
             {
-                if (Console.ReadLine().Equals("-1"))
-                {
-                    break;
-                }
-                else
-                {
-                    innerIngredientsArray[i] = Console.ReadLine();
-                }
+                innerIngredientsArray[i] = Console.ReadLine();
             }
             this.setIngrediants(innerIngredientsArray);
             Console.WriteLine();
@@ -200,9 +249,24 @@ namespace CookingAdvisorApplication_Group4
             //This part will be added after adding all classes...
         }
 
-        public void displayReceiptByCategory(string category)
+        public void displayReceiptByCategory(string category) // I will improve this later
         {
+            int i = 1;
 
+            foreach (DirectoryInfo dirInfo in categoryNames)
+            {
+                if (dirInfo.Name.Equals(category))
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Sub Categories belong to " + category + " Category");
+                    DirectoryInfo subCatInfo = new DirectoryInfo(receiptFolderPath + @"\" + category);
+                    DirectoryInfo[] subCats = subCatInfo.GetDirectories(); 
+                    foreach(DirectoryInfo subCatDirInfo in subCats)
+                    {
+                        Console.WriteLine(i + ". " + subCatDirInfo.Name);
+                    }
+                }
+            }
         }
 
         public virtual void displayReceiptByReceiptName(string receiptName)

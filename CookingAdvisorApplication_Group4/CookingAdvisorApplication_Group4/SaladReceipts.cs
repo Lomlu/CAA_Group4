@@ -49,7 +49,7 @@ namespace CookingAdvisorApplication_Group4
         public override void addNewReceipt()
         {
             base.addNewReceipt();
-
+            
             setSubCategoryFolderName(getReceiptSubCategory());
             setReceiptTextFilePath(getReceiptName());
 
@@ -74,18 +74,19 @@ namespace CookingAdvisorApplication_Group4
                     streamWriter.WriteLine();
                     streamWriter.WriteLine("Number of Calories: " + getNumberOfCalories());
                     streamWriter.WriteLine();
-                    streamWriter.WriteLine("Time for being Prepared: " + getNeededTime());
+                    streamWriter.WriteLine("Time for being Prepared in Minutes: " + getNeededTime());
                     streamWriter.WriteLine();
                     streamWriter.WriteLine("Ingrediants: ");
-                    for (int i = 0; i < getIngrediants().Length; i++)
+                    
+                    for(int i = 0; i < getNumberOfIngredients(); i++)
                     {
                         streamWriter.WriteLine((i + 1) + ") " + getIngrediants()[i]);
                     }
                     streamWriter.WriteLine();
                     streamWriter.WriteLine("Cooking Directions: ");
-                    for (int i = 0; i < getCookingDirections().Length; i++)
+                    foreach (string direction in getCookingDirections())
                     {
-                        streamWriter.WriteLine(getCookingDirections()[i]);
+                        streamWriter.WriteLine(direction);
                     }
 
                 }
@@ -112,15 +113,15 @@ namespace CookingAdvisorApplication_Group4
                         streamWriter.WriteLine("Time for being Prepared: " + getNeededTime());
                         streamWriter.WriteLine();
                         streamWriter.WriteLine("Ingrediants: ");
-                        for (int i = 0; i < getIngrediants().Length; i++)
+                        for(int i = 0; i < getNumberOfIngredients(); i++)
                         {
                             streamWriter.WriteLine((i + 1) + ") " + getIngrediants()[i]);
                         }
                         streamWriter.WriteLine();
                         streamWriter.WriteLine("Cooking Directions: ");
-                        for (int i = 0; i < getCookingDirections().Length; i++)
+                        foreach (string direction in getCookingDirections())
                         {
-                            streamWriter.WriteLine(getCookingDirections()[i]);
+                            streamWriter.WriteLine(direction);
                         }
 
                     }

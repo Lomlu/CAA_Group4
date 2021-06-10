@@ -45,9 +45,12 @@ namespace CookingAdvisorApplication_Group4
             
             Console.WriteLine(readText);
            */
-
+            CookingReceiptMainClass cookingReceiptMainClass = new CookingReceiptMainClass();
+            cookingReceiptMainClass.displayReceiptByCategory("Salad");
+            /*
             SaladReceipts saladReceipts = new SaladReceipts();
             saladReceipts.addNewReceipt();
+            */
         }
     }
 }

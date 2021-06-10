@@ -1,10 +1,19 @@
-Calories:
-100 Calories
-Time:
-1 Hour
+Receipt ID: 1
+
+Receipt Name: Apple Salad
+
+Receipt Category: Salad
+
+Receipt Sub Category: Fruit Salad
+
+Number of Calories: 100
+
+Time for being Prepared in Minutes: 15 
+
 Ingrediants:
-1. Apple
-2. Lettuce
+1) Apple
+2) Lettuce
+
 Cooking Directions:
 Slice the apple
 Slice the lettuce
