@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SE307PrG4.Dessert">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dessert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.InOut">
+    <Position X="15.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAQAAAAAQAAAAAAAADALAAAIACAABABAAoAAIAAAAA=</HashCode>
+      <FileName>InOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.Kitchen">
+    <Position X="7" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARRBAAAEAIAIAQAMISAQAAAgBAAAiAAEAAAAACCAIAA=</HashCode>
+      <FileName>Kitchen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.MeatFish">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MeatFish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.OliveOil">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OliveOils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.Pasta">
+    <Position X="11.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAIAAAAAAAAAAAAACAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pasta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.Program">
+    <Position X="0.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.Salad">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Salads.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SE307PrG4.Soup">
+    <Position X="13.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Soup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9.75" />
+</ClassDiagram>
