@@ -10,6 +10,11 @@ namespace SE307PrG4
     {
         private string catg="OliveOil";
 
+        public OliveOil()
+        {
+
+        }
+
         public override void SetCategory()
         {
             this.catg = "OliveOils";

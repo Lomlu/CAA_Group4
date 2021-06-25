@@ -10,6 +10,11 @@ namespace SE307PrG4
     {
         private string catg = "Dessert";
 
+        public Dessert()
+        {
+
+        }
+
         public override void SetCategory()
         {
             this.catg = "Desserts";

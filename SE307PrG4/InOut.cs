@@ -32,17 +32,25 @@ namespace SE307PrG4
 
         public InOut()
         {
-        }
 
-        public void SetOutPath(string s)
+        }
+        // These methods set and get the file write path
+        //
+        public string SetOutPath(string s)
         {
-            this.OutPath = @"..\\..\\" + s;
+            string t = @"..\\..\\" + s;
+            this.OutPath = t;
+            return t;
         }
 
         public string GetOutPath()
         {
             return this.OutPath;
         }
+
+        //This method is reads string choice input from keyboard
+        //with given prompt strings s
+        //Lower choice limit a and upper choice limit b
 
         public string GetKeyb(int a, int b, string s)
         {
@@ -57,6 +65,9 @@ namespace SE307PrG4
             Console.WriteLine("Invalid Entry. Type " + a + " - " + b + " Please");
             return null;
         }
+
+        //This method is reads integer choice input from keyboard
+        //With eception hamdl,ng for a valid integer conversion
 
         public int GetKeyb()
         {
@@ -74,6 +85,9 @@ namespace SE307PrG4
 
             return i;
         }
+
+        //This method is for a single menu item addition to current Category <List>
+        //Depending on selector parameter k
 
         public void AddMenuItem(int k)
         {
@@ -113,6 +127,15 @@ namespace SE307PrG4
                     break;
             }
         }
+
+        // This Method is the general selective Display method
+        // Parameter t selects category for list item to display
+        // Parameter c selects display type (ie. Calorie limit search,
+        // Ingredient search, Cooking time search
+        // Or all items in category)
+        // Parameter h is for comparison (i.e. cookng time)
+        // Parameter cat is the usual Category string (i.e. CurrentC)
+        // Boolean l1 and m1 are generated as permissives for relateddisplay forms
 
         public void DisplayAll(int t, int c, string h, string cat)
         {
@@ -156,8 +179,8 @@ namespace SE307PrG4
                          if (l1) Console.WriteLine("________________________________________________" + 
                                           "__________________________________\n" +
                              "Menu no.: " + i + " " + q.GetRname() + " " + q.GetCategory() +
-                             " Calories in 100g: " + q.GetCalories() + " Cooking Time: " + 
-                          q.GetTime() + "\n________________________________________________" + 
+                             " Calories in 100g: " + q.GetCalories() + " Cooking Time : "  +
+                          q.GetTime()  + "\n________________________________________________" + 
                                           "__________________________________");
                         i++;
                    }
@@ -181,7 +204,7 @@ namespace SE307PrG4
                         if(l1)Console.WriteLine("________________________________________________" +
                                           "__________________________________\n" +
                              "Menu no.: " + i + " " + q.GetRname() + " " + q.GetCategory() +
-                             " Calories in 100g: " + q.GetCalories() + " Cooking Time: " +
+                             " Calories in 100g: " + q.GetCalories() + " Cooking Time : " + 
                           q.GetTime() + "\n________________________________________________" +
                                           "__________________________________");
                         i++;
@@ -206,7 +229,7 @@ namespace SE307PrG4
                         if(l1)Console.WriteLine("________________________________________________" +
                                           "__________________________________\n" +
                              "Menu no.: " + i + " " + q.GetRname() + " " + q.GetCategory() +
-                             " Calories in 100g: " + q.GetCalories() + " Cooking Time: " +
+                             " Calories in 100g: " + q.GetCalories() + " Cooking Time : " + 
                           q.GetTime() + "\n________________________________________________" +
                                           "__________________________________");
                         i++;
@@ -231,7 +254,7 @@ namespace SE307PrG4
                         if(l1)Console.WriteLine("________________________________________________" +
                                           "__________________________________\n" +
                              "Menu no.: " + i + " " + q.GetRname() + " " + q.GetCategory() +
-                             " Calories in 100g: " + q.GetCalories() + " Cooking Time: " +
+                             " Calories in 100g: " + q.GetCalories() + " Cooking Time : " +
                           q.GetTime() + "\n________________________________________________" +
                                           "__________________________________");
                         i++;
@@ -256,8 +279,8 @@ namespace SE307PrG4
                         if(l1)Console.WriteLine("________________________________________________" +
                                           "__________________________________\n" +
                              "Menu no.: " + i + " " + q.GetRname() + " " + q.GetCategory() +
-                             " Calories in 100g: " + q.GetCalories() + " Cooking Time: " +
-                          q.GetTime() + "\n________________________________________________" +
+                             " Calories in 100g: " + q.GetCalories() + " Cooking Time : " +
+                          q.GetTime()  + "\n________________________________________________" +
                                           "__________________________________");
                         i++;
                     }
@@ -281,7 +304,7 @@ namespace SE307PrG4
                         if(l1)Console.WriteLine("________________________________________________" +
                                           "__________________________________\n" +
                              "Menu no.: " + i + " " + q.GetRname() + " " + q.GetCategory() +
-                             " Calories in 100g: " + q.GetCalories() + " Cooking Time: " +
+                             " Calories in 100g: " + q.GetCalories() + " Cooking Time : " +
                           q.GetTime() + "\n________________________________________________" +
                                           "__________________________________");
                         i++;
@@ -291,6 +314,9 @@ namespace SE307PrG4
                 default: break;
             }
         }
+         //This method is for writing an entire <List> item to disk
+         //Setpath method is intended to be used in conjunction
+         //But path is set as a string constant presently
 
         public void WriteList(int w)
         {
@@ -356,6 +382,10 @@ namespace SE307PrG4
             }
 
         }
+
+        //This method is for reading an entire <List> item from disk
+        //Setpath method is intended to be used in conjunction
+        //But path is set as a string constant presently
 
         public void ReadList(int w)
         {

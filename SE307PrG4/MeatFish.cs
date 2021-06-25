@@ -11,6 +11,11 @@ namespace SE307PrG4
     {
         private string catg = "MeatFish";
 
+        public MeatFish()
+        {
+
+        }
+
 
         public override void SetCategory()
         {

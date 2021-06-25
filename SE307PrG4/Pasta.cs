@@ -24,15 +24,5 @@ namespace SE307PrG4
         {
             return this.catg;
         }
-
-        public void AddRecipe(List<Pasta> p)
-        {
-
-        }
-
-        public void DelRecipe(List<Pasta> p)
-        {
-
-        }
     }
 }

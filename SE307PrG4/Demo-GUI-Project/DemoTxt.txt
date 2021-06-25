@@ -1,0 +1,13 @@
+Main menu selection Buttons
+_______________________________________________________
+
+Exit-                        Exit Program
+SelectCategory:      C:hange Category Selection
+DListMenu:             Display A Menu from Current Selection
+DisplayOptions:       Menu display with Options Submenu
+AddMenu:               Add a Menu To Current Category
+EditMenu:               Edit a Menu Item From Current Category
+DeleteMenu            Delete a Menu from Current Category
+ClearMenus:            Clear Complete Category Records
+SaveToDisk:           Save Changes to Disk File For Current Category
+ReloadFromDisk:     Load Data from Disk ''csv' Files

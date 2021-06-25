@@ -10,6 +10,11 @@ namespace SE307PrG4
     { 
         private string catg = "Soup";
 
+        public Soup()
+        {
+
+        }
+
         public override void SetCategory()
         {
             this.catg = "Soups";

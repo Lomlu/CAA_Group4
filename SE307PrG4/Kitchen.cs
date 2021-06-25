@@ -19,13 +19,20 @@ namespace SE307PrG4
         public abstract void SetCategory();
         public abstract string GetCategory();
 
-        public void SetRname()
+        //Keyboard Input setter for Name attribute
+        //
+        public bool SetRname()
         {
+            bool b;
             Console.WriteLine("Enter a name for This Recipe");
             string s = Console.ReadLine();
+            if (s == "") { Console.WriteLine("Name Error"); b = false; }
+            else b = true;
             this.rcname = s;
+            return b;
         }
 
+        //Set & get Name Attr.
         public void SetRname(string u)
         {
             this.rcname = u;
@@ -35,12 +42,9 @@ namespace SE307PrG4
         {
             return this.rcname;
         }
-
-        public void SetTime(string r)
-        {
-            this.time = r;
-        }
-
+   
+        //Compare methods for Ingredients, Calories and Cooking time
+        //
         public bool CmpIng(string d)
         {
             for (int i = 0; i < 10; i++) if (this.ingredients[i] == d) return true;
@@ -52,7 +56,8 @@ namespace SE307PrG4
             if (int.Parse(this.GetCalories()) <= int.Parse(d)) return true;
             else return false;
         }
-
+        // Cmp time method filters out numbers from time attr. string
+        //
         public bool CmpTime(string d)
         {
             int a, b;
@@ -75,22 +80,29 @@ namespace SE307PrG4
             else return false;
         }
 
+        //Time attr. setting with keyboard input
+        //
         public void SetTime()
         {
             Console.WriteLine("Enter Cooking time For this Menu Item: ");
             this.time = Console.ReadLine();
         }
 
+        //Tme attr. setter and getter
+        //
+        public void SetTime(string r)
+        {
+            this.time = r;
+        }
+
+
         public string GetTime()
         {
             return this.time;
         }
 
-        public void SetRDef(string g)
-        {
-            this.deftext = g;
-        }
-
+        //Menu description entry by keyboards
+        //
         public void SetRDef()
         {
             Console.WriteLine("Enter Brief Preparation Description");
@@ -98,16 +110,19 @@ namespace SE307PrG4
             this.deftext = s;
         }
 
+        // Menu description setter and getter
+
+        public void SetRDef(string g)
+        {
+            this.deftext = g;
+        }
+
         public string GetRDef()
         {
             return this.deftext;
         }
-// Single Ingredient set Method
-        public void SetIng(int z, string a)
-        {
-            this.ingredients[z] = a;
-        }
-// Keyboard input for ingredients
+
+        // Keyboard input for ingredients
         public void SetIng()
         {
             Console.WriteLine("Enter Ingredients For " + this.rcname + 
@@ -127,6 +142,13 @@ namespace SE307PrG4
             this.ingredients = s;
         }
 
+        // Single Ingredient set Method
+        public void SetIng(int z, string a)
+        {
+            this.ingredients[z] = a;
+        }
+
+        // Single Ingredient set Method
         public string[] GetIng(bool q)
         {
             string[] p = new string[10];
@@ -138,41 +160,51 @@ namespace SE307PrG4
             }
            return p;
         }
+        // Calories attr. input by keyboard method
         // Set calorie method gets an integer input and stores as string.
         // 1 method to set by int keybord input + 1 overload for setting by string value
+        //
         public void SetCalories()
         {
-            bool l = true; int cnt = 0, n=100;
+            bool l = true, q; int cnt = 0, n=100;
             while (l)
             {
                 Console.WriteLine("Enter Calories for This Recipe");
-                while ((Int32.TryParse(Console.ReadLine(), out n)) == false)
+                while ((q = Int32.TryParse(Console.ReadLine(), out n)) == false)
                 {
                     Console.WriteLine("Input Error Please Enter Again"); cnt++;
-                    if (cnt++ > 3) 
-                         { Console.WriteLine("Error Limit Exceeded Calories assigned as 100"); 
-                                                                                   l = false; }
+                    if (cnt++ > 3)
+                    {
+                        Console.WriteLine("Error Limit Exceeded Calories assigned as 100");
+                        l = false;
+                    }
                 }
-            }
 
-            this.calories = n.ToString();
+                this.calories = n.ToString();
+                l = false;
+            }
         }
 
+        //Calpories attr. setter and getter
+        //
         public void SetCalories(string a)
         {
             this.calories = a;
         }
 
-            // Set Calorie Methods gets string calorie rating and converts to int ready for comparison 
-            public string GetCalories()
+        public string GetCalories()
         {
             return this.calories;
         }
-        // Recipe ınputting and single recipe selective edit & display method 
+        // Recipe ınputting and single recipe selective edit & display method
+        //y = 0 is for complete input other y values set Ing. or Rdef
+        //Or Time Or Calories
+        //
         public void SetRecipe(int y)
         {
             {
-                if (y == 0 || y == 1) this.SetRname();
+                if (y == 0 ) if(!this.SetRname())return;
+                if (y == 1 ) this.SetRname();
                 if (y == 0 || y == 2) this.SetIng();
                 if (y == 0 || y == 3) this.SetCalories();
                 if (y == 0 || y == 4) this.SetRDef();
@@ -188,20 +220,7 @@ namespace SE307PrG4
                     "Brief Instructions: \n" + this.GetRDef() +
                               "\n____________________________________");
             Console.WriteLine("Calories per 100g: " + this.GetCalories() +
-                                                 " Cooking Time: " + this.time + "\n");
-        }
-
-        public void DisplayRecipe()
-        {
-            string s = null,t;
-            Console.WriteLine("_____________________________________________________" +
-                              "Name : " + this.rcname + " Category " + this.GetCategory() + 
-                          " Calories : " + this.calories + "\n" + " Cooking Time: " + this.time +
-                              "_____________________________________________________");
-            for (int i = 0; i < 10; i++) {if( (t = this.ingredients[i]) != "0") s += t + "  "; }
-            Console.WriteLine("Ingredients: " + s + "\n" + "Instructions :" +
-               "_____________________________________________________\n" + this.deftext);
- 
+                                                 " Cooking Time: " + this.time + " Mins\n");
         }
 
         //Write Item Records to CSV file in Create Or Append Mode
