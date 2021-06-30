@@ -5,3 +5,10 @@ C:\Users\ZEY\Desktop\Zeynep2021\SE307Lab\TermProject\SE307PrG4\obj\Debug\SE307Pr
 C:\Users\ZEY\Desktop\Zeynep2021\SE307Lab\TermProject\SE307PrG4\obj\Debug\SE307PrG4.csproj.CoreCompileInputs.cache
 C:\Users\ZEY\Desktop\Zeynep2021\SE307Lab\TermProject\SE307PrG4\obj\Debug\SE307PrG4.exe
 C:\Users\ZEY\Desktop\Zeynep2021\SE307Lab\TermProject\SE307PrG4\obj\Debug\SE307PrG4.pdb
+C:\Users\berkkocaman\Desktop\SE307PrG4\bin\Debug\SE307PrG4.exe.config
+C:\Users\berkkocaman\Desktop\SE307PrG4\bin\Debug\SE307PrG4.exe
+C:\Users\berkkocaman\Desktop\SE307PrG4\bin\Debug\SE307PrG4.pdb
+C:\Users\berkkocaman\Desktop\SE307PrG4\obj\Debug\SE307PrG4.csproj.AssemblyReference.cache
+C:\Users\berkkocaman\Desktop\SE307PrG4\obj\Debug\SE307PrG4.csproj.CoreCompileInputs.cache
+C:\Users\berkkocaman\Desktop\SE307PrG4\obj\Debug\SE307PrG4.exe
+C:\Users\berkkocaman\Desktop\SE307PrG4\obj\Debug\SE307PrG4.pdb
