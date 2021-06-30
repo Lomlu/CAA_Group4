@@ -1,4 +1,5 @@
-# ********* Term Project Final Report Group IV ********* <br /> 
+# ********* ***TERM PROJECT GROUP IV*** ********* <br /> 
+## ********* BERK KOCAMAN - MERİÇ LOMLU - ZEYNEP TOKGÖZLÜ ********* <br />
 ## ********* SE 307 – Concepts of Object-Oriented Programming ********* <br /> 
 ## ********* Cooking Advisory System ********* <br />
 ## ********* Program DEMO ********* <br />
